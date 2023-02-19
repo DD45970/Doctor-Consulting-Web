@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appointment Booking Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+		}
+		
+		input[type=text], input[type=email], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		
+		.success {
+			color: #4CAF50;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+    <form id="appointment-form" action="submit-form.php" method="post">
+		<div class="container">
+			<h2>Appointment Booking Form</h2>
+			<div class="success">Your appointment has been booked successfully!</div>
+			<label for="name">Full Name</label>
+			<input type="text" id="name" name="name" required>
+			
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="phone">Phone Number</label>
+			<input type="text" id="phone" name="phone" required>
+			
+			<label for="date">Preferred Date</label>
+			<input type="date" id="date" name="date" required>
+			
+			<label for="time">Preferred Time</label>
+			<input type="time" id="time" name="time" required>
+			
+			<label for="reason">Reason for Appointment</label>
+			<textarea id="reason" name="reason" required></textarea>
+			
+			<input type="submit" value="Book Appointment">
+		</div>
+	</form>
+
+  <script>
+    // get a reference to the form element
+    var form = document.getElementById('appointment-form');
+
+    // add an event listener for the form submission event
+    form.addEventListener('submit', function(event) {
+      // prevent the default form submission behavior
+      event.preventDefault();
+
+      // redirect the user to the thank you page
+      window.location.href = 'thankyou.html';
+    });
+  </script>
+</body>
+</html>

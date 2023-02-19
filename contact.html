@@ -53,7 +53,7 @@
     
                 <div class="col-md-10" data-aos="flip-down">
     
-                    <form action="">
+                    <form id="appointment-form" action="submit-form.php" method="post">
     
                         <div class="inputBox">
                             <input type="text" placeholder="full name">
@@ -74,6 +74,21 @@
                         <textarea name="" id="" cols="30" rows="10" placeholder="message ( optional )"></textarea>
     
                         <input type="submit" name="" id="" value="make appointment" class="button">
+                        <script>
+                            var form = document.getElementById('appointment-form');
+                            form.addEventListener('submit', function(event) {
+                             // prevent the default form submission behavior
+                                event.preventDefault();
+                                // redirect the user to the thank you page
+                                 window.location.href = 'final.html';
+                                    });
+
+
+
+
+                        </script>
+                        
+
     
                     </form>
     
