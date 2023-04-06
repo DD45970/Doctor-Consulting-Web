@@ -51,11 +51,11 @@
 		
 	</style>
 </head>
-<body>
-    <form id="appointment-form" action="submit-form.php" method="post">
+<body  bgcolor=" #8585ff" background="css/doc.jpg">
+    <form  action="insert2.php" method="post">
 		<div class="container">
 			<h2>Appointment Booking Form</h2>
-			<div class="success">Your appointment has been booked successfully!</div>
+			<div class="success">Please enter details to confirm appointment</div>
 			<label for="name">Full Name</label>
 			<input type="text" id="name" name="name" required>
 			
@@ -70,9 +70,30 @@
 			
 			<label for="time">Preferred Time</label>
 			<input type="time" id="time" name="time" required>
-			
-			<label for="reason">Reason for Appointment</label>
-			<textarea id="reason" name="reason" required></textarea>
+			<br>
+			<label for="reason">Reason:</label>
+		<select id="reason" name="reason" required>
+			<option value="">--Please select a reason--</option>
+			<option value="General checkup">General checkup</option>
+			<option value="Pain or discomfort">Pain or discomfort</option>
+			<option value="Follow-up visit">Follow-up visit</option>
+			<option value="Medical advice">Medical advice</option>
+		</select><br><br>
+
+		<label for="specialty">Doctor Specialty:</label>
+		<select id="specialty" name="specialty" required>
+			<option value="">--Please select a specialty--</option>
+			<option value="Cardiologist">Cardiologist</option>
+			<option value="Oncologist">Oncologist</option>
+			<option value="Pediatrics"> Pediatrics</option>
+			<option value="Dermatologist">Dermatologist</option>
+			<option value="Neurologist">Neurologist</option>
+			<option value="Physiatrists">Physiatrists</option>
+			<option value="Internal Medicine">Internal Medicine </option>
+			<option value="Gynaecologist">Gynaecologist </option>
+			<option value="Orthopaedic">Orthopaedic</option>
+			<option value="Ophthalmologist">Ophthalmologist</option>
+		</select><br><br>
 			
 			<input type="submit" value="Book Appointment">
 		</div>
@@ -88,7 +109,7 @@
       event.preventDefault();
 
       // redirect the user to the thank you page
-      window.location.href = 'thankyou.html';
+      window.location.href = 'thanku.html';
     });
   </script>
 </body>

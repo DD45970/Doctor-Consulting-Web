@@ -7,17 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
 
-    <!-- aos css file cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- magnific popup css cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-
-    <!-- bootstrap cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/index.css">
@@ -36,8 +26,10 @@
                 <ul>
                     <li class="hahachanged"><a href="index.html">home</a></li>
             <li class="hahachanged"><a href="about.html">about</a></li>
-            <li class="hahachanged"><a href="contact.html">contact</a></li>
+            <li class="hahachanged"><a href="final.html">contact</a></li>
             <li class="hahachanged"><a href="login.html">Login/Register</a></li>
+            <li class="hahachanged"><a href="patient.html">Your Appointments</a></li>
+            
             </ul>
             </nav>
 
@@ -51,36 +43,29 @@
 
     <div class="containerrrr" data-aos="zoom-in">
 
-        <form class="signUp">
+        <form class="signUp" action="register.php" method="post">
             <h3>Create Your Account</h3>
             <p>Enter the correct credentials</p>
             <div class="space"></div>
-            <input class="w100" type="email" placeholder="Email Id" reqired autocomplete='off' />
-            <input class="leftalign" type="password" placeholder="Password" reqired />
-            <input class="leftalign" type="password" placeholder=" Verify Password" reqired />
+            <input class="w100" type="user" id="user"  name="user" placeholder="user Id" reqired autocomplete='off' />
+            <input class="leftalign" type="password" id="pass" name="pass" placeholder="Password" reqired />
+           
             <button class="form-btn sx log-in" type="button">Log In</button>
             <button class="form-btn dx" type="submit">Sign Up</button>
         </form>
-        <form class="signIn">
+        <form class="signIn" action="login1.php" method="post">
             <h3>Welcome</br>Back !</h3>
             <p>Please Enter Your Correct Credentials</p>
             <div class="space"></div>
-            <input class="leftalign" type="email" placeholder="email Id" autocomplete='off' reqired />
-            <input class="leftalign" type="password" placeholder="Password" reqired />
+            <input class="leftalign" type="user" name="uname" placeholder="user Id" autocomplete='off' reqired />
+            <input class="leftalign" type="password" name="password" placeholder="Password" reqired />
             <button class="form-btn sx back" type="button">Back</button>
-            <button class="form-btn dx" type="submit">Log In</button>
+            <button class="form-btn dx" onclick="window.location.href='doctor.php'" type="submit" >Log In</button>
+            
         </form>
     </div>
 
 
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- magnific popup js link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-    <!-- aos js file cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <!-- custom js link  -->
     <script src="js/main.js"></script>
